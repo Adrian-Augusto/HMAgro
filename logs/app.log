@@ -456,3 +456,20 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'JW
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.4.jar:6.1.4]
 	... 68 common frames omitted
 
+2026-01-14T08:35:36.081-03:00  INFO 7032 --- [main] hmAgro.HmApplication                     : Starting HmApplication using Java 25.0.1 with PID 7032 (C:\Users\Adrian\HMBACKEND\HM\target\classes started by Adrian in C:\Users\Adrian\HMBACKEND\HM)
+2026-01-14T08:35:36.083-03:00  INFO 7032 --- [main] hmAgro.HmApplication                     : No active profile set, falling back to 1 default profile: "default"
+2026-01-14T08:35:36.613-03:00  WARN 7032 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'corsConfigurationSource' defined in class path resource [hmAgro/Security/WebConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=webConfig; factoryMethodName=corsConfigurationSource; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [hmAgro/Security/WebConfig.class]] for bean 'corsConfigurationSource' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=corsConfigurationSource; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [hmAgro/Security/SecurityConfig.class]] bound.
+2026-01-14T08:35:36.632-03:00 ERROR 7032 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'corsConfigurationSource', defined in class path resource [hmAgro/Security/WebConfig.class], could not be registered. A bean with that name has already been defined in class path resource [hmAgro/Security/SecurityConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
