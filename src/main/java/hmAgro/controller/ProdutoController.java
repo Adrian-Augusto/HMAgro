@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 import java.util.List;
+@CrossOrigin(origins = "https://agronomia-front-end-4qh79ebjc-adrian-augustos-projects.vercel.app")
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/products")
 public class ProdutoController {
 
     @Autowired
